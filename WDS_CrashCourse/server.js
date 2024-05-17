@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const userRouter = require("./routes/users");
-app.use("/users", userRouter);
+const postsRouter = require("./routes/posts");
 
+app.use("/users", userRouter);
+app.use("/posts", postsRouter);
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
