@@ -1,6 +1,7 @@
 const express = require("express");
 const usersRouter = express.Router();
 const users = [{ name: "Hasan Basri" }, { name: "Violet Evergarden" }];
+
 usersRouter.get("/", (req, res) => {
   res.send("user list");
 });
@@ -50,7 +51,8 @@ usersRouter
 
 usersRouter.param("id", (req, res, next, id) => {
   console.log(req.params.id);
+  res.send(users[Number(req.params.id)].name);
   next();
-  // req.users = next();
 });
+
 module.exports = usersRouter;
