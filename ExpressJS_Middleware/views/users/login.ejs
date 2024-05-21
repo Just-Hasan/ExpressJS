@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100dvh;
+        width: 100dvw;
+        display: grid;
+        place-content: center;
+      }
+      form {
+        padding: 16px;
+        border: 1px solid #1c1c1c;
+        border-radius: 16px;
+        display: grid;
+        grid-template-columns: 30fr 70fr;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/users/login" method="POST">
+      <label for="email">Email</label>
+      <input type="text" name="email" />
+      <label for="password">Password</label>
+      <input type="password" name="password" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

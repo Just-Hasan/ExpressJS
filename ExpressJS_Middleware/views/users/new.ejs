@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExpressJS</title>
+  </head>
+  <body>
+    <!-- action is an attribute that specifies the path to handle this submit -->
+    <form action="/users" method="POST">
+      <label for=""
+        >First name
+        <input type="text" name="firstname" value="<%= locals.firstName %>" />
+      </label>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

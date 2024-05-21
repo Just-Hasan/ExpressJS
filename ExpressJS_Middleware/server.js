@@ -5,14 +5,16 @@ const usersRoutes = require("./routes/users");
 const express = require("express");
 const app = express();
 app.use(express.json());
-
+app.use(express.static("public")); //->middleware to render static files
+app.use(express.urlencoded({ extended: true })); //->middleware to acces the body so we can access data from frontend
+app.use(express.json());
 /////////////////////////////////////[set]
 app.set("view engine", "ejs");
 
 /////////////////////////////////////[use]
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
-app.listen("3000");
+app.listen("7000");
 
 /*
 /////////////////////////////////////[Middleware]
