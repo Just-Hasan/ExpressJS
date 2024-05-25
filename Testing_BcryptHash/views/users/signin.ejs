@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100dvh;
+        width: 100dvw;
+        display: grid;
+        place-content: center;
+        overflow: hidden;
+      }
+      form {
+        display: grid;
+        grid-template-columns: 30fr 70fr;
+        row-gap: 1.6rem;
+        border: 1px solid #1c1c1c;
+        padding: 16px;
+      }
+      button {
+        grid-column: 2;
+        width: max-content;
+        justify-self: end;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi, please sign in to your account</h1>
+    <form action="/users/signin" method="POST">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+
+      <button>signup</button>
+    </form>
+  </body>
+</html>
